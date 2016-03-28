@@ -42,6 +42,7 @@ if (isset($_GET["id"]) && isset($_GET["password"])) {
 
 				// success
 				$response["success"] = 1;
+				$response["type"] = "admin";
 
 				// user node
 				$response["user"] = array();
@@ -64,6 +65,7 @@ if (isset($_GET["id"]) && isset($_GET["password"])) {
 
 				// success
 				$response["success"] = 1;
+				$response["type"] = "customer";
 
 				// user node
 				$response["user"] = array();
@@ -84,6 +86,7 @@ if (isset($_GET["id"]) && isset($_GET["password"])) {
 
 						// success
 						$response["success"] = 1;
+						$response["type"] = "driver";
 
 						// user node
 						$response["order"] = array();
@@ -106,6 +109,7 @@ if (isset($_GET["id"]) && isset($_GET["password"])) {
 
 						// success
 						$response["success"] = 1;
+						$response["type"] = "restaurant";
 
 						// user node
 						$response["order"] = array();

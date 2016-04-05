@@ -1,0 +1,90 @@
+create_order(not finish yet)
+parameter:	
+link:	http://localhost/fyp_connect/create_order.php?
+
+
+
+create_orderline
+parameter:	ordernumber, foodid, quanitity
+link:	http://localhost/fyp_connect/create_orderline.php?ordernumber=1&foodid=f0001&quanitity=1
+
+
+
+create_user(not finish yet)
+parameter:	
+link:	http://localhost/fyp_connect/create_orderline.php?
+
+
+
+customer_get_order
+parameter:	userid
+link:	http://localhost/fyp_connect/customer_get_order.php?userid=10002
+
+
+
+delete_order
+parameter:	number
+link:	http://localhost/fyp_connect/delete_order.php?number=1
+
+
+
+find_customer_id
+parameter:	userid
+link:	http://localhost/fyp_connect/find_customer_id.php?userid=10002
+
+
+
+find_restaurant_id
+parameter:	userid
+link:	http://localhost/fyp_connect/find_restaurant_id.php?userid=10004
+
+
+
+get_all_food
+parameter:	
+link:	http://localhost/fyp_connect/get_all_food.php
+
+
+
+get_all_order
+parameter:	
+link:	http://localhost/fyp_connect/get_all_order.php
+
+
+
+get_all_user
+parameter:	
+link:	http://localhost/fyp_connect/get_all_user.php
+
+
+
+get_order_details
+parameter:	number
+link:	http://localhost/fyp_connect/get_order_details.php?number=1
+
+
+
+get_restaurant_food
+parameter:	userid
+link:	http://localhost/fyp_connect/get_restaurant_food.php?userid=10004
+
+
+
+get_user_details
+parameter:	id, password
+link:	http://localhost/fyp_connect/get_user_details.php?id=10001&password=10001
+
+
+
+search_details
+parameter:	type, keyword
+link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
+
+
+
+update_order(not finish yet)
+parameter:	
+link:	http://localhost/fyp_connect/update_order.php?
+
+
+

@@ -38,8 +38,7 @@ if (isset($_GET["userid"])) {
         // echo no users JSON
         echo json_encode($response);
     }
-	$rid = "'" + $restaurantid + "'";
-	$results = mysql_query("SELECT *FROM `food` WHERE Restaurantid = $rid") or die(mysql_error());
+	$results = mysql_query("SELECT *FROM `food` WHERE Restaurantid = '$restaurantid'") or die(mysql_error());
 			
 			if (mysql_num_rows($results) > 0) {
 				// looping through all results

@@ -68,16 +68,16 @@ INSERT INTO `Restaurant` VALUES ('r0015', 'Goobne Chicken', '15/F, King Wah Cent
 
 INSERT INTO `Food` VALUES ('f0001', 'french fries', 'french fries', 10, 'french_fries.jpg', 'r0001');
 INSERT INTO `Food` VALUES ('f0002', 'fried chicken', 'chicken', 15, 'fried_chicken.jpg', 'r0002');
-INSERT INTO `Food` VALUES ('f0003', 'Coke', 'drink', 9, 'coke.jpg', 'r0003');
+INSERT INTO `Food` VALUES ('f0003', 'coke', 'drink', 9, 'coke.jpg', 'r0003');
 INSERT INTO `Food` VALUES ('f0004', 'coffee', 'drink', 5, 'coffee.jpg', 'r0004');
 INSERT INTO `Food` VALUES ('f0005', 'fries', 'drink', 5, 'fries.jpg', 'r0004');
 INSERT INTO `Food` VALUES ('f0006', 'risotto', 'food', 35, 'risotto.jpg', 'r0005');
-INSERT INTO `Food` VALUES ('f0007', 'icecream', 'Dessert', 12, 'icecream.jpg', 'r0006');
-INSERT INTO `Food` VALUES ('f0008', 'icecream', 'Dessert', 12, 'icecream.jpg', 'r0007');
-INSERT INTO `Food` VALUES ('f0009', 'icecream', 'Dessert', 12, 'icecream.jpg', 'r0008');
+INSERT INTO `Food` VALUES ('f0007', 'icecream', 'dessert', 12, 'icecream.jpg', 'r0006');
+INSERT INTO `Food` VALUES ('f0008', 'icecream', 'dessert', 12, 'icecream.jpg', 'r0007');
+INSERT INTO `Food` VALUES ('f0009', 'icecream', 'dessert', 12, 'icecream.jpg', 'r0008');
 INSERT INTO `Food` VALUES ('f0010', 'fries', 'french fries', 12, 'fries.jpg', 'r0009');
 INSERT INTO `Food` VALUES ('f0011', 'fries', 'french fries', 12, 'fries.jpg', 'r0010');
-INSERT INTO `Food` VALUES ('f0012', 'Coke', 'drink', 6, 'coke.jpg', 'r0011');
+INSERT INTO `Food` VALUES ('f0012', 'coke', 'drink', 6, 'coke.jpg', 'r0011');
 INSERT INTO `Food` VALUES ('f0013', 'risotto', 'food', 12, 'risotto.jpg', 'r0012');
 INSERT INTO `Food` VALUES ('f0014', 'tea', 'drink', 5, 'tea.jpg', 'r0013');
 INSERT INTO `Food` VALUES ('f0015', 'pizza', 'food', 40, 'pizza.jpg', 'r0014');

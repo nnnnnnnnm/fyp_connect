@@ -1,3 +1,9 @@
+create_food
+parameter:	name, type, price, image, Restaurantid
+link:	http://localhost/fyp_connect/create_food.php?name=french%20friess&type=french%20fries&price=13&image=french_fries.jpg&Restaurantid=r0001
+
+
+
 create_order(not finish yet)
 parameter:	
 link:	http://localhost/fyp_connect/create_order.php?
@@ -19,6 +25,12 @@ link:	http://localhost/fyp_connect/create_orderline.php?
 customer_get_order
 parameter:	userid
 link:	http://localhost/fyp_connect/customer_get_order.php?userid=10002
+
+
+
+delete_food
+parameter:	id
+link:	http://localhost/fyp_connect/delete_food.php?id=f0001
 
 
 
@@ -79,6 +91,12 @@ link:	http://localhost/fyp_connect/get_user_details.php?id=10001&password=10001
 search_details
 parameter:	type, keyword
 link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
+
+
+
+update_food
+parameter:	id, name, type, price, image
+link:	http://localhost/fyp_connect/update_order.php?
 
 
 

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Following code will update a product information
+ * Following code will delete a product from table
  * A product is identified by product id (pid)
  */
 
@@ -9,13 +9,8 @@
 $response = array();
 
 // check for required fields
-if (isset($_GET['id']) && isset($_GET['name']) && isset($_GET['type']) && isset($_GET['price']) && isset($_GET['image'])) {
-    
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $name = $_GET['name'];
-    $type = $_GET['type'];
-    $price = $_GET['price'];
-	$image = $_GET['image'];
 
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
@@ -24,18 +19,23 @@ if (isset($_GET['id']) && isset($_GET['name']) && isset($_GET['type']) && isset(
     $db = new DB_CONNECT();
 
     // mysql update row with matched pid
-    $result = mysql_query("UPDATE `food` SET name = '$name', type = '$type', price = '$price', image = '$image' WHERE id = '$id'");
-
-    // check if row inserted or not
-    if ($result) {
+    $result = mysql_query("DELETE FROM `food` WHERE id = $id");
+    
+    // check if row deleted or not
+    if (mysql_affected_rows() > 0) {
         // successfully updated
         $response["success"] = 1;
-        $response["message"] = "Food successfully updated.";
-        
+        $response["message"] = "Food successfully deleted";
+
         // echoing JSON response
         echo json_encode($response);
     } else {
-        
+        // no product found
+        $response["success"] = 0;
+        $response["message"] = "No food found";
+
+        // echo no users JSON
+        echo json_encode($response);
     }
 } else {
     // required field is missing

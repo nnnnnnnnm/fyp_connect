@@ -96,7 +96,7 @@ INSERT INTO `Food` VALUES ('f0003', 'Coke', 'Drink', 9, 'coke.jpg', 'r0003');
 INSERT INTO `Food` VALUES ('f0004', 'Coffee', 'Drink', 5, 'coffee.jpg', 'r0004');
 INSERT INTO `Food` VALUES ('f0005', 'Fries', 'Drink', 5, 'fries.jpg', 'r0004');
 INSERT INTO `Food` VALUES ('f0006', 'Risotto', 'Italian Food', 35, 'risotto.jpg', 'r0005');
-INSERT INTO `Food` VALUES ('f0007', 'Bibimbap', 'Korean Food', 12, 'ibimbap.jpg', 'r0006');
+INSERT INTO `Food` VALUES ('f0007', 'Bibimbap', 'Korean Food', 12, 'bibimbap.jpg', 'r0006');
 INSERT INTO `Food` VALUES ('f0008', 'Icecream', 'Dessert', 12, 'icecream.jpg', 'r0007');
 INSERT INTO `Food` VALUES ('f0009', 'Icecream', 'Dessert', 12, 'icecream.jpg', 'r0008');
 INSERT INTO `Food` VALUES ('f0010', 'French fries', 'Fried Food', 12, 'fries.jpg', 'r0009');

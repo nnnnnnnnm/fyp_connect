@@ -51,7 +51,7 @@ if (isset($_GET["userid"])) {
 					$order = array();
 					$order["number"] = $row["number"];
 					$order["date_time"] = $row["date_time"];
-					$order["pick_up"] = $row["pick_up"];
+					$order["all_pick_up"] = $row["all_pick_up"];
 					$order["received_by_customer"] = $row["received_by_customer"];
 					$order["Customerid"] = $row["Customerid"];
 					$order["Driverid"] = $row["Driverid"];

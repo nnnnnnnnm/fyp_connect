@@ -9,11 +9,12 @@
 $response = array();
 
 // check for required fields
-if (isset($_GET['ordernumber']) && isset($_GET['foodid']) && isset($_GET['quanitity'])) {
+if (isset($_GET['ordernumber']) && isset($_GET['foodid']) && isset($_GET['quanitity']) && isset($_GET['Restaurantid'])) {
     
     $ordernumber = $_GET['ordernumber'];
 	$foodid = $_GET['foodid'];
     $quanitity = $_GET['quanitity'];
+	$Restaurantid= $_GET['Restaurantid'];
 
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
@@ -22,7 +23,7 @@ if (isset($_GET['ordernumber']) && isset($_GET['foodid']) && isset($_GET['quanit
     $db = new DB_CONNECT();
 	
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO `orderline`(Ordernumber, Foodid, quanitity) VALUES('$ordernumber', '$foodid', '$quanitity')");
+    $result = mysql_query("INSERT INTO `orderline`(Ordernumber, Foodid, quanitity, pick_up, Restaurantid) VALUES('$ordernumber', '$foodid', '$quanitity', NULL, '$Restaurantid')");
 
     // check if row inserted or not
     if ($result) {

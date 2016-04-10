@@ -31,7 +31,7 @@ if (isset($_GET["number"])) {
             $order = array();
             $order["number"] = $result["number"];
             $order["date_time"] = $result["date_time"];
-            $order["pick_up"] = $result["pick_up"];
+            $order["all_pick_up"] = $result["all_pick_up"];
             $order["received_by_customer"] = $result["received_by_customer"];
             $order["Customerid"] = $result["Customerid"];
             $order["Driverid"] = $result["Driverid"];

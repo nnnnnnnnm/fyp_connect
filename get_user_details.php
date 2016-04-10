@@ -61,6 +61,9 @@ if (isset($_GET["id"]) && isset($_GET["password"])) {
 				$user["address"] = $result["address"];
 				$user["email"] = $result["email"];
 				$user["telNum"] = $result["telNum"];
+				$user["payment"] = $result["payment"];
+				$user["credit_card_number"] = $result["credit_card_number"];
+				$user["credit_card_security_code"] = $result["credit_card_security_code"];
 				$user["Userid"] = $result["Userid"];
 
 				// success

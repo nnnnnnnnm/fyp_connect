@@ -1,0 +1,67 @@
+CREATE TABLE Admin (id varchar(5) NOT NULL, name varchar(255), Userid int(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Customer (id varchar(5) NOT NULL, name varchar(255), address varchar(255), email varchar(255), telNum int(8), payment varchar(10), credit_card_number int(12), credit_card_security_code int(3), Userid int(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Driver (id varchar(5) NOT NULL, name varchar(255), telNum int(8), Userid int(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Food (id varchar(5) NOT NULL, name varchar(255), type varchar(255), price int(5), image varchar(255), Restaurantid varchar(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Location (id varchar(5) NOT NULL, dateTime datetime NULL, latitude int(6), longitude int(6), altitude int(6), Driverid varchar(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE `Order` (number int(10) NOT NULL AUTO_INCREMENT, date_time datetime NULL, all_pick_up datetime NULL, received_by_customer datetime NULL, Customerid varchar(5) NOT NULL, Driverid varchar(5) NULL, PRIMARY KEY (number));
+CREATE TABLE OrderLine (Ordernumber int(10) NOT NULL, Foodid varchar(5) NOT NULL, quanitity int(3), pick_up datetime NULL, Restaurantid varchar(5) NOT NULL, PRIMARY KEY (Ordernumber, Foodid));
+CREATE TABLE Restaurant (id varchar(5) NOT NULL, name varchar(255), address varchar(255), type varchar(255), telNum int(8), Userid int(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE `User` (id int(5) NOT NULL AUTO_INCREMENT, password varchar(10), use_name varchar(255), PRIMARY KEY (id));
+ALTER TABLE Location ADD INDEX FKLocation587468 (Driverid), ADD CONSTRAINT FKLocation587468 FOREIGN KEY (Driverid) REFERENCES Driver (id);
+ALTER TABLE Food ADD INDEX FKFood599476 (Restaurantid), ADD CONSTRAINT FKFood599476 FOREIGN KEY (Restaurantid) REFERENCES Restaurant (id);
+ALTER TABLE `Order` ADD INDEX FKOrder558759 (Customerid), ADD CONSTRAINT FKOrder558759 FOREIGN KEY (Customerid) REFERENCES Customer (id);
+ALTER TABLE OrderLine ADD INDEX FKOrderLine661446 (Foodid), ADD CONSTRAINT FKOrderLine661446 FOREIGN KEY (Foodid) REFERENCES Food (id);
+ALTER TABLE OrderLine ADD INDEX FKOrderLine472735 (Ordernumber), ADD CONSTRAINT FKOrderLine472735 FOREIGN KEY (Ordernumber) REFERENCES `Order` (number);
+ALTER TABLE Driver ADD INDEX FKDriver795269 (Userid), ADD CONSTRAINT FKDriver795269 FOREIGN KEY (Userid) REFERENCES `User` (id);
+ALTER TABLE Customer ADD INDEX FKCustomer695148 (Userid), ADD CONSTRAINT FKCustomer695148 FOREIGN KEY (Userid) REFERENCES `User` (id);
+ALTER TABLE Restaurant ADD INDEX FKRestaurant517455 (Userid), ADD CONSTRAINT FKRestaurant517455 FOREIGN KEY (Userid) REFERENCES `User` (id);
+ALTER TABLE Admin ADD INDEX FKAdmin399003 (Userid), ADD CONSTRAINT FKAdmin399003 FOREIGN KEY (Userid) REFERENCES `User` (id);
+ALTER TABLE `Order` ADD INDEX FKOrder148146 (Driverid), ADD CONSTRAINT FKOrder148146 FOREIGN KEY (Driverid) REFERENCES Driver (id);
+ALTER TABLE OrderLine ADD INDEX FKOrderLine643622 (Restaurantid), ADD CONSTRAINT FKOrderLine643622 FOREIGN KEY (Restaurantid) REFERENCES Restaurant (id);
+
+
+
+INSERT INTO `User` VALUES (10001, '10001', 'admin');
+INSERT INTO `User` VALUES (10002, '10002', 'customer');
+INSERT INTO `User` VALUES (10003, '10003', 'driver');
+INSERT INTO `User` VALUES (10004, '10004', 'restaurant');
+INSERT INTO `User` VALUES (10005, '10005', 'admin');
+INSERT INTO `User` VALUES (10006, '10006', 'customer');
+INSERT INTO `User` VALUES (10007, '10007', 'driver');
+INSERT INTO `User` VALUES (10008, '10008', 'restaurant');
+
+INSERT INTO `Admin` VALUES ('a0001', 'admin1', 10001);
+INSERT INTO `Admin` VALUES ('a0002', 'admin2', 10005);
+
+INSERT INTO `Customer` VALUES ('c0001', 'customer1', '1 Room, 1 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'aaaa@yahoo.com.hk', 12345678, NULL, NULL, NULL, 10002);
+INSERT INTO `Customer` VALUES ('c0002', 'customer2', '9 Room, 9 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'bbbb@gmail.com.hk', 11112222, NULL, NULL, NULL, 10006);
+
+INSERT INTO `Driver` VALUES ('d0001', 'driver1', 12123434, 10003);
+INSERT INTO `Driver` VALUES ('d0002', 'driver2', 11223344, 10007);
+
+INSERT INTO `Restaurant` VALUES ('r0001', 'hitea', 'G/F, 29A Pak Shing Street, Tai Po', 'fast food', 20248080, 10004);
+INSERT INTO `Restaurant` VALUES ('r0002', 'pizza hut', '5/F, 54B Pak Shing Street, Tai Po', 'fast food', 12341234, 10008);
+INSERT INTO `Restaurant` VALUES ('r0003', 'kfc', '4/F, 74C Pak Shing Street, Tai Po', 'Healthy food', 21700000, 10008);
+INSERT INTO `Restaurant` VALUES ('r0004', 'espresso alchemy', 'Shop 36, Wk Square, 36-44 Nathan Road, Tsim Sha Tsui', 'coffee shop', 27211138, 10004);
+INSERT INTO `Restaurant` VALUES ('r0005', 'selfit salad station', 'G/F,Hop Hing Building, 30 Gilmans Bazaar,Central', 'westem', 52251348, 10008);
+INSERT INTO `Restaurant` VALUES ('r0006', 'number one kitchen', '2/F, Jordan Square,28-28A Jordan Road,Jordan', 'hong kong style', 69990050, 10008);
+INSERT INTO `Restaurant` VALUES ('r0007', 'HeSheEat', 'Shop 201,2/F,Causeway Bay,2-10 Great George Street, Causeway Bat', 'westem', 28682277, 10004);
+INSERT INTO `Restaurant` VALUES ('r0008', 'Lab 66', 'Shop 1,G/F,74 Hak Po St,Mong Kok', 'International', 37092866, 10008);
+INSERT INTO `Restaurant` VALUES ('r0009', 'Burger Joys', 'Shop E,G/F,De Fenwick,42-50 Lockhart Road,Wan Chai', 'American', 27871288, 10004);
+INSERT INTO `Restaurant` VALUES ('r0010', 'Burgeroom', 'Shop D,G/F,Food Street,50-56 Paterson Street,Fashion Walk, Causeway Bay', 'American', 28909130, 10008);
+INSERT INTO `Restaurant` VALUES ('r0011', 'Mukshidonna', '1/F,Jardine Center, 50 Jardines Bazaar, Causeway Bay', 'Korean', 55051112, 10004);
+INSERT INTO `Restaurant` VALUES ('r0012', 'Toreyore Hamayaki', '18/f,Macau Yai Yuen Centre,525 Hennesy Road,Causeway Bay', 'Japanese', 25755677, 10004);
+INSERT INTO `Restaurant` VALUES ('r0013', 'Otto Restaurant', '16-17F, Lhart 487-489 Lockhart Road, Causeway Bay', 'French', 28938617, 10008);
+INSERT INTO `Restaurant` VALUES ('r0014', 'The Hwaduk', '21/F, Cubus, 1 Hoi Ping Road, Causeway Bay', 'Korean', 28118821, 10008);
+INSERT INTO `Restaurant` VALUES ('r0015', 'Goobne Chicken', '15/F, King Wah Centre, 628 Nathan Road, Mong Kok', 'Korean', 21160002, 10008);
+
+INSERT INTO `Food` VALUES ('f0001', 'french fries', 'french fries', 10, 'french_fries.jpg', 'r0001');
+INSERT INTO `Food` VALUES ('f0002', 'fried chicken', 'chicken', 15, 'fried_chicken.jpg', 'r0002');
+INSERT INTO `Food` VALUES ('f0003', 'Coke', 'drink', 9, 'fried_chicken.jpg', 'r0003');
+INSERT INTO `Food` VALUES ('f0004', ' lemon tea', 'drink', 5, 'fried_chicken.jpg', 'r0004');
+
+INSERT INTO `Order` VALUES (1, '2016-02-01 15:37:39', NULL, NULL, 'c0001', NULL);
+INSERT INTO `Order` VALUES (2, '2016-02-02 10:37:39', NULL, NULL, 'c0002', NULL);
+
+INSERT INTO `OrderLine` VALUES (1, 'f0001', 2, NULL, 'r0001');
+INSERT INTO `OrderLine` VALUES (2, 'f0001', 5, NULL, 'r0001');

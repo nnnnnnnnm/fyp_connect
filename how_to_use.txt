@@ -11,8 +11,8 @@ link:	http://localhost/fyp_connect/create_order.php?
 
 
 create_orderline
-parameter:	ordernumber, foodid, quanitity
-link:	http://localhost/fyp_connect/create_orderline.php?ordernumber=1&foodid=f0001&quanitity=1
+parameter:	ordernumber, foodid, quanitity, Restaurantid
+link:	http://localhost/fyp_connect/create_orderline.php?ordernumber=1&foodid=f0001&quanitity=1&Restaurantid=r0001
 
 
 

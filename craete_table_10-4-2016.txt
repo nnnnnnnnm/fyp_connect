@@ -21,6 +21,8 @@ ALTER TABLE OrderLine ADD INDEX FKOrderLine643622 (Restaurantid), ADD CONSTRAINT
 
 
 
+
+
 INSERT INTO `User` VALUES (10001, '10001', 'admin');
 INSERT INTO `User` VALUES (10002, '10002', 'customer');
 INSERT INTO `User` VALUES (10003, '10003', 'driver');
@@ -29,22 +31,51 @@ INSERT INTO `User` VALUES (10005, '10005', 'admin');
 INSERT INTO `User` VALUES (10006, '10006', 'customer');
 INSERT INTO `User` VALUES (10007, '10007', 'driver');
 INSERT INTO `User` VALUES (10008, '10008', 'restaurant');
+INSERT INTO `User` VALUES (10009, '10009', 'restaurant');
+INSERT INTO `User` VALUES (10010, '10010', 'restaurant');
+INSERT INTO `User` VALUES (10011, '10011', 'restaurant');
+INSERT INTO `User` VALUES (10012, '10012', 'restaurant');
+INSERT INTO `User` VALUES (10013, '10013', 'restaurant');
+INSERT INTO `User` VALUES (10014, '10014', 'restaurant');
+INSERT INTO `User` VALUES (10015, '10015', 'restaurant');
+INSERT INTO `User` VALUES (10016, '10016', 'restaurant');
+INSERT INTO `User` VALUES (10017, '10017', 'restaurant');
+INSERT INTO `User` VALUES (10018, '10018', 'restaurant');
+INSERT INTO `User` VALUES (10019, '10019', 'restaurant');
+INSERT INTO `User` VALUES (10020, '10020', 'restaurant');
+INSERT INTO `User` VALUES (10021, '10021', 'restaurant');
+
+
+
+
 
 INSERT INTO `Admin` VALUES ('a0001', 'admin1', 10001);
 INSERT INTO `Admin` VALUES ('a0002', 'admin2', 10005);
 
+
+
+
+
 INSERT INTO `Customer` VALUES ('c0001', 'customer1', '1 Room, 1 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'aaaa@yahoo.com.hk', 12345678, NULL, NULL, NULL, 10002);
 INSERT INTO `Customer` VALUES ('c0002', 'customer2', '9 Room, 9 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'bbbb@gmail.com.hk', 11112222, NULL, NULL, NULL, 10006);
+
+
+
+
 
 INSERT INTO `Driver` VALUES ('d0001', 'driver1', 12123434, 10003);
 INSERT INTO `Driver` VALUES ('d0002', 'driver2', 11223344, 10007);
 
-INSERT INTO `Restaurant` VALUES ('r0001', 'hitea', 'G/F, 29A Pak Shing Street, Tai Po', 'fast food', 20248080, 10004);
-INSERT INTO `Restaurant` VALUES ('r0002', 'pizza hut', '5/F, 54B Pak Shing Street, Tai Po', 'fast food', 12341234, 10008);
-INSERT INTO `Restaurant` VALUES ('r0003', 'kfc', '4/F, 74C Pak Shing Street, Tai Po', 'Healthy food', 21700000, 10008);
-INSERT INTO `Restaurant` VALUES ('r0004', 'espresso alchemy', 'Shop 36, Wk Square, 36-44 Nathan Road, Tsim Sha Tsui', 'coffee shop', 27211138, 10004);
-INSERT INTO `Restaurant` VALUES ('r0005', 'selfit salad station', 'G/F,Hop Hing Building, 30 Gilmans Bazaar,Central', 'westem', 52251348, 10008);
-INSERT INTO `Restaurant` VALUES ('r0006', 'number one kitchen', '2/F, Jordan Square,28-28A Jordan Road,Jordan', 'hong kong style', 69990050, 10008);
+
+
+
+
+INSERT INTO `Restaurant` VALUES ('r0001', 'Hitea', 'G/F, 29A Pak Shing Street, Tai Po', 'fast food', 20248080, 10004);
+INSERT INTO `Restaurant` VALUES ('r0002', 'Pizza hut', '5/F, 54B Pak Shing Street, Tai Po', 'fast food', 12341234, 10008);
+INSERT INTO `Restaurant` VALUES ('r0003', 'KFC', '4/F, 74C Pak Shing Street, Tai Po', 'Healthy food', 21700000, 10008);
+INSERT INTO `Restaurant` VALUES ('r0004', 'Espresso alchemy', 'Shop 36, Wk Square, 36-44 Nathan Road, Tsim Sha Tsui', 'coffee shop', 27211138, 10004);
+INSERT INTO `Restaurant` VALUES ('r0005', 'Selfit salad station', 'G/F,Hop Hing Building, 30 Gilmans Bazaar,Central', 'westem', 52251348, 10008);
+INSERT INTO `Restaurant` VALUES ('r0006', 'Number one kitchen', '2/F, Jordan Square,28-28A Jordan Road,Jordan', 'hong kong style', 69990050, 10008);
 INSERT INTO `Restaurant` VALUES ('r0007', 'HeSheEat', 'Shop 201,2/F,Causeway Bay,2-10 Great George Street, Causeway Bat', 'westem', 28682277, 10004);
 INSERT INTO `Restaurant` VALUES ('r0008', 'Lab 66', 'Shop 1,G/F,74 Hak Po St,Mong Kok', 'International', 37092866, 10008);
 INSERT INTO `Restaurant` VALUES ('r0009', 'Burger Joys', 'Shop E,G/F,De Fenwick,42-50 Lockhart Road,Wan Chai', 'American', 27871288, 10004);
@@ -55,13 +86,36 @@ INSERT INTO `Restaurant` VALUES ('r0013', 'Otto Restaurant', '16-17F, Lhart 487-
 INSERT INTO `Restaurant` VALUES ('r0014', 'The Hwaduk', '21/F, Cubus, 1 Hoi Ping Road, Causeway Bay', 'Korean', 28118821, 10008);
 INSERT INTO `Restaurant` VALUES ('r0015', 'Goobne Chicken', '15/F, King Wah Centre, 628 Nathan Road, Mong Kok', 'Korean', 21160002, 10008);
 
-INSERT INTO `Food` VALUES ('f0001', 'french fries', 'french fries', 10, 'french_fries.jpg', 'r0001');
-INSERT INTO `Food` VALUES ('f0002', 'fried chicken', 'chicken', 15, 'fried_chicken.jpg', 'r0002');
-INSERT INTO `Food` VALUES ('f0003', 'Coke', 'drink', 9, 'fried_chicken.jpg', 'r0003');
-INSERT INTO `Food` VALUES ('f0004', ' lemon tea', 'drink', 5, 'fried_chicken.jpg', 'r0004');
+
+
+
+
+INSERT INTO `Food` VALUES ('f0001', 'French Fries', 'Fried Food', 10, 'french_fries.jpg', 'r0001');
+INSERT INTO `Food` VALUES ('f0002', 'Fried Chicken', 'Fried Food', 15, 'fried_chicken.jpg', 'r0002');
+INSERT INTO `Food` VALUES ('f0003', 'Coke', 'Drink', 9, 'coke.jpg', 'r0003');
+INSERT INTO `Food` VALUES ('f0004', 'Coffee', 'Drink', 5, 'coffee.jpg', 'r0004');
+INSERT INTO `Food` VALUES ('f0005', 'Fries', 'Drink', 5, 'fries.jpg', 'r0004');
+INSERT INTO `Food` VALUES ('f0006', 'Risotto', 'Italian Food', 35, 'risotto.jpg', 'r0005');
+INSERT INTO `Food` VALUES ('f0008', 'Icecream', 'Dessert', 12, 'icecream.jpg', 'r0007');
+INSERT INTO `Food` VALUES ('f0009', 'Icecream', 'Dessert', 12, 'icecream.jpg', 'r0008');
+INSERT INTO `Food` VALUES ('f0010', 'French fries', 'Fried Food', 12, 'fries.jpg', 'r0009');
+INSERT INTO `Food` VALUES ('f0011', 'French fries', 'Fried Food', 12, 'fries.jpg', 'r0010');
+INSERT INTO `Food` VALUES ('f0012', 'Coke', 'Drink', 6, 'coke.jpg', 'r0011');
+INSERT INTO `Food` VALUES ('f0013', 'Risotto', 'Italian Food', 12, 'risotto.jpg', 'r0012');
+INSERT INTO `Food` VALUES ('f0014', 'Tea', 'Drink', 5, 'tea.jpg', 'r0013');
+INSERT INTO `Food` VALUES ('f0015', 'Pizza', 'Italian Food', 40, 'pizza.jpg', 'r0014');
+INSERT INTO `Food` VALUES ('f0016', 'Fried Chicken', 'Fried Food', 35, 'chicken.jpg', 'r0015');
+
+
+
+
 
 INSERT INTO `Order` VALUES (1, '2016-02-01 15:37:39', NULL, NULL, 'c0001', NULL);
 INSERT INTO `Order` VALUES (2, '2016-02-02 10:37:39', NULL, NULL, 'c0002', NULL);
+
+
+
+
 
 INSERT INTO `OrderLine` VALUES (1, 'f0001', 2, NULL, 'r0001');
 INSERT INTO `OrderLine` VALUES (2, 'f0001', 5, NULL, 'r0001');

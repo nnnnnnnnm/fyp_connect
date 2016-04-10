@@ -4,9 +4,9 @@ link:	http://localhost/fyp_connect/create_food.php?name=french%20friess&type=fre
 
 
 
-create_order(not finish yet)
-parameter:	
-link:	http://localhost/fyp_connect/create_order.php?
+create_order
+parameter:	customerid
+link:	http://localhost/fyp_connect/create_order.php?customerid=c0001
 
 
 

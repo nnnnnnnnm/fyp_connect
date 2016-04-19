@@ -118,5 +118,5 @@ INSERT INTO `Order` VALUES (2, '2016-02-02 10:37:39', NULL, NULL, 'c0002', NULL)
 
 
 
-INSERT INTO `OrderLine` VALUES (1, 'f0001', 2, NULL, 'r0001');
-INSERT INTO `OrderLine` VALUES (2, 'f0001', 5, NULL, 'r0001');
+INSERT INTO `OrderLine` (Ordernumber, Foodid, quanitity, pick_up, Restaurantid) VALUES (1, 'f0001', 2, NULL, 'r0001');
+INSERT INTO `OrderLine` (Ordernumber, Foodid, quanitity, pick_up, Restaurantid) VALUES (2, 'f0001', 5, NULL, 'r0001');

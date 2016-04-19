@@ -1,105 +1,140 @@
+1:
 create_food
 parameter:	name, type, price, image, Restaurantid
 link:	http://localhost/fyp_connect/create_food.php?name=french%20friess&type=french%20fries&price=13&image=french_fries.jpg&Restaurantid=r0001
 
 
 
+
+2:
 create_order
 parameter:	customerid
 link:	http://localhost/fyp_connect/create_order.php?customerid=c0001
 
 
 
+
+3:
 create_orderline
 parameter:	ordernumber, foodid, quanitity, Restaurantid
 link:	http://localhost/fyp_connect/create_orderline.php?ordernumber=1&foodid=f0001&quanitity=1&Restaurantid=r0001
 
 
 
+
+4:
 create_user(not finish yet)
 parameter:	
 link:	http://localhost/fyp_connect/create_orderline.php?
 
 
 
+
+5:
 customer_get_order
 parameter:	userid
 link:	http://localhost/fyp_connect/customer_get_order.php?userid=10002
 
 
 
+
+6:
 delete_food
 parameter:	id
 link:	http://localhost/fyp_connect/delete_food.php?id=f0001
 
 
 
+
+7:
 delete_order
 parameter:	number
 link:	http://localhost/fyp_connect/delete_order.php?number=1
 
 
 
+
+8:
 find_customer_id
 parameter:	userid
 link:	http://localhost/fyp_connect/find_customer_id.php?userid=10002
 
 
 
+
+9:
 find_restaurant_id
 parameter:	userid
 link:	http://localhost/fyp_connect/find_restaurant_id.php?userid=10004
 
 
 
+
+10:
 get_all_food
 parameter:	
 link:	http://localhost/fyp_connect/get_all_food.php
 
 
 
+
+11:
 get_all_order
 parameter:	
 link:	http://localhost/fyp_connect/get_all_order.php
 
 
 
+
+12:
 get_all_user
 parameter:	
 link:	http://localhost/fyp_connect/get_all_user.php
 
 
 
+
+13:
 get_order_details
 parameter:	number
 link:	http://localhost/fyp_connect/get_order_details.php?number=1
 
 
 
+
+14:
 get_restaurant_food
 parameter:	userid
 link:	http://localhost/fyp_connect/get_restaurant_food.php?userid=10004
 
 
 
+
+15:
 get_user_details
 parameter:	id, password
 link:	http://localhost/fyp_connect/get_user_details.php?id=10001&password=10001
 
 
 
+
+16:
 search_details
 parameter:	type, keyword
 link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
 
 
 
+
+17:
 update_food
 parameter:	id, name, type, price, image
 link:	http://localhost/fyp_connect/update_order.php?
 
 
 
+
+18:
 update_order(not finish yet)
 parameter:	
 link:	http://localhost/fyp_connect/update_order.php?

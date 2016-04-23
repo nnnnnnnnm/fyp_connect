@@ -6,7 +6,7 @@ CREATE TABLE Location (id varchar(5) NOT NULL, dateTime datetime NULL, latitude 
 CREATE TABLE `Order` (number int(10) NOT NULL AUTO_INCREMENT, date_time datetime NULL, all_pick_up datetime NULL, received_by_customer datetime NULL, Customerid varchar(5) NOT NULL, Driverid varchar(5), PRIMARY KEY (number));
 CREATE TABLE OrderLine (Ordernumber int(10) NOT NULL, Foodid varchar(5) NOT NULL, quanitity int(3), pick_up datetime NULL, status varchar(255) DEFAULT 'Cooking', Restaurantid varchar(5) NOT NULL, PRIMARY KEY (Ordernumber, Foodid));
 CREATE TABLE Restaurant (id varchar(5) NOT NULL, name varchar(255), address varchar(255), type varchar(255), telNum int(8), Userid int(5) NOT NULL, PRIMARY KEY (id));
-CREATE TABLE `User` (id int(5) NOT NULL AUTO_INCREMENT, password varchar(10), use_name varchar(255), PRIMARY KEY (id));
+CREATE TABLE `User` (id int(5) NOT NULL AUTO_INCREMENT, password varchar(10), user_name varchar(255), PRIMARY KEY (id));
 ALTER TABLE Location ADD INDEX FKLocation587468 (Driverid), ADD CONSTRAINT FKLocation587468 FOREIGN KEY (Driverid) REFERENCES Driver (id);
 ALTER TABLE Food ADD INDEX FKFood599476 (Restaurantid), ADD CONSTRAINT FKFood599476 FOREIGN KEY (Restaurantid) REFERENCES Restaurant (id);
 ALTER TABLE `Order` ADD INDEX FKOrder558759 (Customerid), ADD CONSTRAINT FKOrder558759 FOREIGN KEY (Customerid) REFERENCES Customer (id);

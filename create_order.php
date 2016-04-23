@@ -9,9 +9,10 @@
 $response = array();
 
 // check for required fields
-if (isset($_GET['customerid'])) {
+if (isset($_GET['customerid']) && isset($_GET['order_total'])) {
     
     $customerId = $_GET['customerid'];
+	$order_total = $_GET['order_total'];
 
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
@@ -19,7 +20,7 @@ if (isset($_GET['customerid'])) {
     // connecting to db
     $db = new DB_CONNECT();
 	
-	$currentTime = mkTime() + (7*3600);
+	$currentTime = mkTime() + (6*3600);
 	$dateTime=date('y-m-d H:i:s' , $currentTime);
 	
 	$number = mysql_query("SELECT max(number)as number FROM `order`");
@@ -41,7 +42,7 @@ if (isset($_GET['customerid'])) {
     }
 	
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO `order`(number, date_time, Customerid) VALUES('$number', '$dateTime', '$customerId')");
+    $result = mysql_query("INSERT INTO `order`(number, date_time, order_total, Customerid) VALUES($number, '$dateTime', $order_total, '$customerId')");
 
     // check if row inserted or not
     if ($result) {
@@ -59,6 +60,8 @@ if (isset($_GET['customerid'])) {
         
         // echoing JSON response
         echo json_encode($response);
+		echo $number . "       ";
+		echo $dateTime. "       " . $order_total. "       " . $customerId;
     }
 } else {
     // required field is missing

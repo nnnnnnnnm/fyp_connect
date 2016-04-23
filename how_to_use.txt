@@ -8,16 +8,16 @@ link:	http://localhost/fyp_connect/create_food.php?name=french%20friess&type=fre
 
 2:
 create_order
-parameter:	customerid
-link:	http://localhost/fyp_connect/create_order.php?customerid=c0001
+parameter:	customerid, order_total
+link:	http://localhost/fyp_connect/create_order.php?customerid=c0001&order_total=25
 
 
 
 
 3:
 create_orderline
-parameter:	ordernumber, foodid, quanitity, Restaurantid
-link:	http://localhost/fyp_connect/create_orderline.php?ordernumber=1&foodid=f0001&quanitity=1&Restaurantid=r0001
+parameter:	ordernumber, foodid, quanitity, item_total, Restaurantid
+link:	http://localhost/fyp_connect/create_orderline.php?ordernumber=1&foodid=f0001&quanitity=1&item_total=25&Restaurantid=r0001
 
 
 

@@ -119,6 +119,21 @@ link:	http://localhost/fyp_connect/get_user_details.php?id=10001&password=10001
 
 
 16:
+restaurant_get_order
+parameter:	sql
+link:	http://localhost/fyp_connect/get_restaurant_order.php?sql=SELECT%20*%20FROM%20`order`%20WHERE%20number=1%20OR%20number=2sss
+
+
+
+
+17:
+restaurant_get_orderline
+parameter:	restaurantid
+link:	http://localhost/fyp_connect/get_restaurant_orderline.php?restaurantid=r0001
+
+
+
+18:
 search_details
 parameter:	type, keyword
 link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
@@ -126,7 +141,7 @@ link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
 
 
 
-17:
+19:
 update_food
 parameter:	id, name, type, price, image
 link:	http://localhost/fyp_connect/update_order.php?
@@ -134,7 +149,7 @@ link:	http://localhost/fyp_connect/update_order.php?
 
 
 
-18:
+20:
 update_order(not finish yet)
 parameter:	
 link:	http://localhost/fyp_connect/update_order.php?

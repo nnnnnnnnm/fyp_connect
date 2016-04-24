@@ -133,7 +133,15 @@ link:	http://localhost/fyp_connect/get_restaurant_orderline.php?restaurantid=r00
 
 
 
+
 18:
+restaurant_ordernumber_get_orderline
+parameter:	number, restaurantid
+link:	http://localhost/fyp_connect/restaurant_ordernumber_get_orderline.php?number=1&restaurantid=r0001
+
+
+
+19:
 search_details
 parameter:	type, keyword
 link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
@@ -141,7 +149,7 @@ link:	http://localhost/fyp_connect/search_details.php?type=food&keyword=chicken
 
 
 
-19:
+20:
 update_food
 parameter:	id, name, type, price, image
 link:	http://localhost/fyp_connect/update_order.php?
@@ -149,7 +157,7 @@ link:	http://localhost/fyp_connect/update_order.php?
 
 
 
-20:
+21:
 update_order(not finish yet)
 parameter:	
 link:	http://localhost/fyp_connect/update_order.php?

@@ -28,18 +28,12 @@ if (isset($_GET["foodid"])) {
         if (mysql_num_rows($result) > 0) {
 
             $result = mysql_fetch_array($result);
-
-            $food = array();
-            $food["type"] = $result["type"];
 			
-            // success
+			// success
             $response["success"] = 1;
-
-            // user node
-            $response["food"] = array();
-
-            array_push($response["food"], $food);
-
+			
+            $response["type"] = $result["type"];
+			
             // echoing JSON response
             echo json_encode($response);
         } else {

@@ -14,7 +14,7 @@ require_once __DIR__ . '/db_connect.php';
 // connecting to db
 $db = new DB_CONNECT();
 
-if (isset($_GET["number"]) && $_GET["restaurantid"])) {
+if (isset($_GET["number"]) && isset($_GET["restaurantid"])) {
 	
 	$number = $_GET['number'];
     $restaurantid = $_GET['restaurantid'];

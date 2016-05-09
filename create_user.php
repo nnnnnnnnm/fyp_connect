@@ -19,39 +19,71 @@ if (isset($_GET['customerid'])) {
     // connecting to db
     $db = new DB_CONNECT();
 	
-	$currentTime = mkTime() + (7*3600);
-	$dateTime=date('y-m-d H:i:s' , $currentTime);
+	$userid = mysql_query("SELECT max(id)as userid FROM `user`");
 	
-	$number = mysql_query("SELECT max(number)as number FROM `order`");
-	if (!empty($number)) {
+	if (!empty($userid)) {
         // check for empty result
-        if (mysql_num_rows($number) > 0) {
+        if (mysql_num_rows($userid) > 0) {
 
-            $number = mysql_fetch_array($number);
+            $userid = mysql_fetch_array($userid);
 
-			$number = $number["number"];
-			$number = $number + 1;
+			$userid = $userid["userid"];
+			$userid = $userid + 1;
 			
 			
 		} else {
-            $number = 1;
+            $userid = 10001;
         }
 	} else {
-        $number = 1;
+        $userid = 10001;
+    }
+	
+	$customerid = mysql_query("SELECT max(id)as customerid FROM `customer`");
+	
+	if (!empty($customerid)) {
+        // check for empty result
+        if (mysql_num_rows($customerid) > 0) {
+
+            $customerid = mysql_fetch_array($customerid);
+
+			$customerid = $customerid["customerid"];
+			$customerid = $customerid + 1;
+			
+			
+		} else {
+            $customerid = c0001;
+        }
+	} else {
+        $customerid = c0001;
     }
 	
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO `order`(number, date_time, Customerid) VALUES('$number', '$dateTime', '$customerId')");
+    $result = mysql_query("INSERT INTO `user`(id, password, user_name) VALUES('$userid', '$userid', 'customer')");
+	
 
     // check if row inserted or not
     if ($result) {
+		
         // successfully inserted into database
-        $response["success"] = 1;
-		$response["number"] = $number;
-        $response["message"] = "Order successfully created.";
+        
+		
+		$response["userid"] = $userid;
+		$response["message"] = "Order successfully created.";
+
+		$result = mysql_query("INSERT INTO `customer`(id, name, address, email, telNum, payment, credit_card_number, credit_card_security_code, Userid) VALUES('$userid', '$userid', 'customer')");
+		
+
+
+
+
+
+		
+        
+		
 
         // echoing JSON response
         echo json_encode($response);
+		
     } else {
         // failed to insert row
         $response["success"] = 0;

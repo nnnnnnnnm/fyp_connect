@@ -9,9 +9,13 @@
 $response = array();
 
 // check for required fields
-if (isset($_GET['customerid'])) {
+if (isset($_GET['password']) && isset($_GET['name']) && isset($_GET['address']) && isset($_GET['email']) && isset($_GET['telNum'])) {
     
-    $customerId = $_GET['customerid'];
+    $password = $_GET['password'];
+	$name = $_GET['name'];
+	$address = $_GET['address'];
+	$email = $_GET['email'];
+	$telNum = $_GET['telNum'];
 
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
@@ -44,10 +48,14 @@ if (isset($_GET['customerid'])) {
         // check for empty result
         if (mysql_num_rows($customerid) > 0) {
 
+		
             $customerid = mysql_fetch_array($customerid);
+			
 
 			$customerid = $customerid["customerid"];
-			$customerid = $customerid + 1;
+			
+			$customerid = ++$customerid;
+		
 			
 			
 		} else {
@@ -63,22 +71,27 @@ if (isset($_GET['customerid'])) {
 
     // check if row inserted or not
     if ($result) {
+
+		$response["User_id"] = $userid;
 		
-        // successfully inserted into database
-        
+		$result2 = mysql_query("INSERT INTO `customer`(id, name, address, email, telNum, payment, credit_card_number, credit_card_security_code, Userid) VALUES('$customerid', '$name', '$address', '$email', '$telNum', 'cash', '000000000000', '000', '$userid')");
 		
-		$response["userid"] = $userid;
-		$response["message"] = "Order successfully created.";
-
-		$result = mysql_query("INSERT INTO `customer`(id, name, address, email, telNum, payment, credit_card_number, credit_card_security_code, Userid) VALUES('$userid', '$userid', 'customer')");
-		
-
-
-
-
-
-		
-        
+		if ($result) {
+			
+			$response["success"] = 1;
+			$response["userId"] = $userid;
+			$response["customerId"] = $customerid;
+			$response["password"] = $password;
+			$response["message"] = "GGWP";
+			
+			
+		}else{
+			
+			// failed to insert row
+			$response["success"] = 0;
+			$response["message"] = "Oops! An error occurred.";
+			
+		}
 		
 
         // echoing JSON response

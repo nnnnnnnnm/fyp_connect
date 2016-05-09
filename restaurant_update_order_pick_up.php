@@ -9,13 +9,15 @@
 $response = array();
 
 // check for required fields
-if (isset($_POST['number']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['description'])) {
+if (isset($_GET['ordernumber']) && isset($_GET['restaurantid'])) {
     
-    $number = $_POST['number'];
-    $name = $_POST['name'];
-    $price = $_POST['price'];
-    $description = $_POST['description'];
-
+    $ordernumber = $_GET['ordernumber'];
+    $restaurantid = $_GET['restaurantid'];
+	
+	$currentTime = mkTime() + (6*3600);
+	$dateTime = date('y-m-d H:i:s' , $currentTime);
+	
+	
     // include db connect class
     require_once __DIR__ . '/db_connect.php';
 
@@ -23,13 +25,13 @@ if (isset($_POST['number']) && isset($_POST['name']) && isset($_POST['price']) &
     $db = new DB_CONNECT();
 
     // mysql update row with matched pid
-    $result = mysql_query("UPDATE products SET name = '$name', price = '$price', description = '$description' WHERE pid = $pid");
-
+    $result = mysql_query("UPDATE `orderline` SET `pick_up`='$dateTime' WHERE Ordernumber=$ordernumber and Restaurantid='$restaurantid'");
+	
     // check if row inserted or not
     if ($result) {
         // successfully updated
         $response["success"] = 1;
-        $response["message"] = "Product successfully updated.";
+        $response["message"] = "Food successfully updated.";
         
         // echoing JSON response
         echo json_encode($response);
@@ -39,7 +41,7 @@ if (isset($_POST['number']) && isset($_POST['name']) && isset($_POST['price']) &
 } else {
     // required field is missing
     $response["success"] = 0;
-    $response["message"] = "Required field(s) is missing";
+    $response["message"] = "Required field(s) is missing111111111111111111";
 
     // echoing JSON response
     echo json_encode($response);

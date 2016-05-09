@@ -22,7 +22,7 @@ if (isset($_GET['driverid']) && isset($_GET['number'])) {
     $db = new DB_CONNECT();
 
     // mysql update row with matched pid
-    $result = mysql_query("UPDATE `order` SET Driverid = '$driverid' WHERE number = $number");
+    $result = mysql_query("UPDATE `order` SET Driverid = '$driverid' WHERE number = $number AND Driverid is NULL");
 
     // check if row inserted or not
     if ($result) {

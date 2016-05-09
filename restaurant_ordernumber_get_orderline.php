@@ -21,7 +21,7 @@ if (isset($_GET["number"]) && isset($_GET["restaurantid"])) {
 
 
 	// get all products from products table
-	$result = mysql_query("SELECT * FROM `orderline` WHERE Restaurantid = '$restaurantid' AND Ordernumber = '$number'") or die(mysql_error());
+	$result = mysql_query("SELECT * FROM `orderline` WHERE Restaurantid = '$restaurantid' AND Ordernumber = '$number' AND status='Cooking'") or die(mysql_error());
 
 	// check for empty result
 	if (mysql_num_rows($result) > 0) {

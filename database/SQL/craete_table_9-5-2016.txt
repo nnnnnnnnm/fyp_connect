@@ -1,5 +1,5 @@
 CREATE TABLE Admin (id varchar(5) NOT NULL, name varchar(255), Userid int(5) NOT NULL, PRIMARY KEY (id));
-CREATE TABLE Customer (id varchar(5) NOT NULL, name varchar(255), address varchar(255), email varchar(255), telNum int(8), payment varchar(11), credit_card_number varchar(12), credit_card_security_code varchar(3), Userid int(5) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE Customer (id varchar(5) NOT NULL, name varchar(255), address varchar(255), email varchar(255), telNum int(8), payment varchar(11), credit_card_number varchar(16), credit_card_security_code varchar(3), Userid int(5) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Driver (id varchar(5) NOT NULL, name varchar(255), telNum int(8), Userid int(5) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Food (id varchar(5) NOT NULL, name varchar(255), type varchar(255), price int(5), image varchar(255), Restaurantid varchar(5) NOT NULL, PRIMARY KEY (id));
 CREATE TABLE Location (id varchar(5) NOT NULL, dateTime datetime NULL, latitude int(6), longitude int(6), altitude int(6), Driverid varchar(5) NOT NULL, PRIMARY KEY (id));

@@ -15,7 +15,7 @@ require_once __DIR__ . '/db_connect.php';
 $db = new DB_CONNECT();
 
 // get all products from products table
-$result = mysql_query("SELECT *FROM `order`") or die(mysql_error());
+$result = mysql_query("SELECT * FROM `order` WHERE Driverid is null") or die(mysql_error());
 
 // check for empty result
 if (mysql_num_rows($result) > 0) {

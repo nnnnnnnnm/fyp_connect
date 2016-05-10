@@ -26,9 +26,9 @@ INSERT INTO `User` VALUES (10023, '10023', 'customer');
 INSERT INTO `Admin` VALUES ('a0001', 'admin1', 10001);
 INSERT INTO `Admin` VALUES ('a0002', 'admin2', 10005);
 
-INSERT INTO `Customer` VALUES ('c0001', 'customer1', '1 Room, 1 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'aaaa@yahoo.com.hk', 12345678, NULL, NULL, NULL, 10002);
-INSERT INTO `Customer` VALUES ('c0002', 'customer2', '9 Room, 9 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'bbbb@gmail.com.hk', 11112222, NULL, NULL, NULL, 10006);
-INSERT INTO `Customer` VALUES ('c0003', 'customer3', '5 Room, 2 Flat, Yee Hau House, Yee  Nga Court, Tai Po, N.T.', 'cccc@gmail.com.hk', 33445566, NULL, NULL, NULL, 10023);
+INSERT INTO `Customer` VALUES ('c0001', 'customer1', '1 Room, 1 Flat, Yee Hau House, Yee  Nga Court, Tai Po', 'aaaa@yahoo.com.hk', 12345678, NULL, NULL, NULL, 10002);
+INSERT INTO `Customer` VALUES ('c0002', 'customer2', '9 Room, 9 Flat, Yee Hau House, Yee  Nga Court, Tai Po', 'bbbb@gmail.com.hk', 11112222, NULL, NULL, NULL, 10006);
+INSERT INTO `Customer` VALUES ('c0003', 'customer3', '5 Room, 2 Flat, Yee Hau House, Yee  Nga Court, Tai Po', 'cccc@gmail.com.hk', 33445566, NULL, NULL, NULL, 10023);
 
 
 INSERT INTO `Driver` VALUES ('d0001', 'driver1', 12123434, 10003);

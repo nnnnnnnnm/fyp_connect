@@ -19,7 +19,7 @@ $db = new DB_CONNECT();
 if (isset($_GET["id"])) {
     $id = $_GET['id'];
 
-	$results = mysql_query("SELECT *FROM `order` WHERE Driverid = '$id'") or die(mysql_error());
+	$results = mysql_query("SELECT *FROM `order` WHERE Driverid = '$id' AND received_by_customer is NULL") or die(mysql_error());
 			
 	if (mysql_num_rows($results) > 0) {
 		// looping through all results

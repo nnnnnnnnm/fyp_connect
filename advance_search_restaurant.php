@@ -33,7 +33,7 @@ if (isset($_GET["keyword"]) && isset($_GET["type"]) && isset($_GET["district"]))
 		$result = mysql_query("SELECT * FROM restaurant WHERE id LIKE '%$keyword%' 
 		OR name LIKE '%$keyword%' OR address LIKE '%$keyword%' OR type LIKE '%$keyword%' 
 		OR telNum LIKE '%$keyword%' OR Userid LIKE '%$keyword%' 
-		AND type='$type' OR address LIKE '%$district%'");
+		AND type='$type' AND address LIKE '%$district%'");
 		
 	}
 	

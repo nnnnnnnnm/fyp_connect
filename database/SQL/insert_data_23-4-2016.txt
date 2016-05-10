@@ -35,22 +35,22 @@ INSERT INTO `Driver` VALUES ('d0001', 'driver1', 12123434, 10003);
 INSERT INTO `Driver` VALUES ('d0002', 'driver2', 11223344, 10007);
 
 
-INSERT INTO `Restaurant` VALUES ('r0001', 'Hitea', 'G/F, 29A Pak Shing Street, Tai Po', 'Italian', 20248080, 10004);
-INSERT INTO `Restaurant` VALUES ('r0002', 'Pizza hut', '5/F, 54B Pak Shing Street, Tai Po', 'Italian', 12341234, 10008);
-INSERT INTO `Restaurant` VALUES ('r0003', 'KFC', '4/F, 74C Pak Shing Street, Tai Po', 'American', 21700000, 10009);
-INSERT INTO `Restaurant` VALUES ('r0004', 'Espresso alchemy', 'Shop 36, 36-44 Nathan Road, Tsim Sha Tsui', 'Western', 27211138, 10010);
-INSERT INTO `Restaurant` VALUES ('r0005', 'Selfit salad station', 'G/F,Hop Hing Building, 30 Gilmans Bazaar,Central', 'Western', 52251348, 10011);
-INSERT INTO `Restaurant` VALUES ('r0006', 'Number one kitchen', '2/F, Jordan Square,28-28A Jordan Road,Jordan', 'Chinese', 69990050, 10012);
-INSERT INTO `Restaurant` VALUES ('r0007', 'HeSheEat', 'Shop 201,Causeway Bay,2-10 Great George Street, Causeway Bat', 'Western', 28682277, 10013);
-INSERT INTO `Restaurant` VALUES ('r0008', 'Lab 66', 'Shop 1,74 Hak Po St,Mong Kok', 'Western', 37092866, 10014);
-INSERT INTO `Restaurant` VALUES ('r0009', 'Burger Joys', 'Shop E,De Fenwick,42-50 Lockhart Road,Wan Chai', 'American', 27871288, 10015);
-INSERT INTO `Restaurant` VALUES ('r0010', 'Burgeroom', 'Shop D,50-56 Paterson Street,Fashion Walk, Causeway Bay', 'American', 28909130, 10016);
-INSERT INTO `Restaurant` VALUES ('r0011', 'Mukshidonna', '1/F,Jardine Center, 50 Jardines Bazaar, Causeway Bay', 'Korean', 55051112, 10017);
-INSERT INTO `Restaurant` VALUES ('r0012', 'Toreyore Hamayaki', '18/f,Macau Yai Yuen Centre,525 Hennesy Road,Causeway Bay', 'Japanese', 25755677, 10018);
-INSERT INTO `Restaurant` VALUES ('r0013', 'Otto Restaurant', '16-17F, Lhart 487-489 Lockhart Road, Causeway Bay', 'French', 28938617, 10019);
-INSERT INTO `Restaurant` VALUES ('r0014', 'The Hwaduk', '21/F,1 Hoi Ping Road, Causeway Bay', 'Korean', 28118821, 10020);
-INSERT INTO `Restaurant` VALUES ('r0015', 'Goobne Chicken', '15/F, King Wah Centre, 628 Nathan Road, Mong Kok', 'Korean', 21160002, 10021);
-INSERT INTO `Restaurant` VALUES ('r0016', 'Sun Thai Restaurant', '2/F, W Square, 314-324 Hennessy Road, Wan Chai ', 'Thai', 28278877, 10022);
+INSERT INTO `Restaurant` VALUES ('r0001', 'Hitea', 'Shop31,G/F, 29A Pak Shing Street, Tai Po', 'Italian', 20248080, 10004);
+INSERT INTO `Restaurant` VALUES ('r0002', 'Pizza hut', 'Shop12,5/F, 54B Pak Shing Street, Tai Po', 'Italian', 12341234, 10008);
+INSERT INTO `Restaurant` VALUES ('r0003', 'KFC', 'Shop5,4/F, 74C Pak Shing Street, Tai Po', 'American', 21700000, 10009);
+INSERT INTO `Restaurant` VALUES ('r0004', 'Espresso alchemy', 'Shop 36,2/F, 36-44 Nathan Road, Tsim Sha Tsui', 'Western', 27211138, 10010);
+INSERT INTO `Restaurant` VALUES ('r0005', 'Selfit salad station', 'Shop12,G/F,Hop Hing Building, 30 Gilmans Bazaar,Central', 'Western', 52251348, 10011);
+INSERT INTO `Restaurant` VALUES ('r0006', 'Number one kitchen', 'Shop5,2/F, Jordan Square,28-28A Jordan Road,Jordan', 'Chinese', 69990050, 10012);
+INSERT INTO `Restaurant` VALUES ('r0007', 'HeSheEat', 'Shop 201,2/F,Causeway Bay,2-10 Great George Street, Causeway Bat', 'Western', 28682277, 10013);
+INSERT INTO `Restaurant` VALUES ('r0008', 'Lab 66', 'Shop 1,G/F,74 Hak Po St,Mong Kok', 'Western', 37092866, 10014);
+INSERT INTO `Restaurant` VALUES ('r0009', 'Burger Joys', 'Shop E,3/F,De Fenwick,42-50 Lockhart Road,Wan Chai', 'American', 27871288, 10015);
+INSERT INTO `Restaurant` VALUES ('r0010', 'Burgeroom', 'Shop D,4/F,50-56 Paterson Street,Fashion Walk, Causeway Bay', 'American', 28909130, 10016);
+INSERT INTO `Restaurant` VALUES ('r0011', 'Mukshidonna', 'Shop27,1/F,Jardine Center, 50 Jardines Bazaar, Causeway Bay', 'Korean', 55051112, 10017);
+INSERT INTO `Restaurant` VALUES ('r0012', 'Toreyore Hamayaki', 'Shop15,18/f,Macau Yai Yuen Centre,525 Hennesy Road,Causeway Bay', 'Japanese', 25755677, 10018);
+INSERT INTO `Restaurant` VALUES ('r0013', 'Otto Restaurant', 'Shop20,16-17F, Lhart 487-489 Lockhart Road, Causeway Bay', 'French', 28938617, 10019);
+INSERT INTO `Restaurant` VALUES ('r0014', 'The Hwaduk', 'Shop2,21/F,1 Hoi Ping Road, Causeway Bay', 'Korean', 28118821, 10020);
+INSERT INTO `Restaurant` VALUES ('r0015', 'Goobne Chicken', 'Shop14,15/F, King Wah Centre, 628 Nathan Road, Mong Kok', 'Korean', 21160002, 10021);
+INSERT INTO `Restaurant` VALUES ('r0016', 'Sun Thai Restaurant', 'Shop16,2/F, W Square, 314-324 Hennessy Road, Wan Chai ', 'Thai', 28278877, 10022);
 
 
 

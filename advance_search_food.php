@@ -23,12 +23,24 @@ if (isset($_GET["keyword"]) && isset($_GET["type"]) && isset($_GET["min"]) && is
 	$min = $_GET['min'];
 	$max = $_GET['max'];
 	
-	if($keyword=="null" || $keyword=="NULL"){
+	if(($keyword=="null" || $keyword=="NULL") && ($min=="null" || $min=="NULL" || $max=="null" || $max=="NULL")){
 		
+		// get a product from products table
+		$result = mysql_query("SELECT * FROM `food` WHERE type='$type'");
+		
+	}else if ($keyword=="null" || $keyword=="NULL") {
+
 		// get a product from products table
 		$result = mysql_query("SELECT * FROM `food` WHERE type='$type' AND  price >= $min AND price <= $max");
 		
-	}else{
+	}else if ($min=="null" || $min=="NULL" || $max=="null" || $max=="NULL") {
+		
+		// get a product from products table
+		$result = mysql_query("SELECT * FROM `food` WHERE id LIKE '%$keyword%' OR name LIKE '%$keyword%' OR type LIKE '%$keyword%' 
+		OR price LIKE '%$keyword%' OR image LIKE '%$keyword%' OR Restaurantid LIKE '%$keyword%' 
+		AND type='$type'");
+	
+	}else {
 		
 		// get a product from products table
 		$result = mysql_query("SELECT * FROM `food` WHERE id LIKE '%$keyword%' OR name LIKE '%$keyword%' OR type LIKE '%$keyword%' 
